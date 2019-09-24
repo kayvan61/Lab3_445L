@@ -31,6 +31,7 @@
 #include "Clock.h"
 #include "speaker.h"
 
+#define PF4             (*((volatile uint32_t *)0x40025010))
 #define PF2             (*((volatile uint32_t *)0x40025010))
 #define PF1             (*((volatile uint32_t *)0x40025008))
 void DisableInterrupts(void); // Disable interrupts
@@ -40,30 +41,95 @@ void EndCritical(long sr);    // restore I bit to previous value
 void WaitForInterrupt(void);  // low power mode
 
 void initPortFDebug(void);
+void buttonLogic(void);
+void DelayWait10ms(uint32_t n);
 
-//port A is for buttons 
+//port C is for buttons 
 //port B is for audio
+
+uint8_t isAInput = 1;
+uint8_t isCInput = 0;
+uint8_t min = 0;
+uint8_t hour = 0;
 int main(void){
   PLL_Init(Bus80MHz);                   // 80 MHz
+  ST7735_InitR(INITR_REDTAB);
 	clockInit();
-	buttonInit(0x0000);
+	buttonInit(0x00F0, buttonLogic);
 	speakerInit();
 	initPortFDebug();
 	UART_Init();
 	
   EnableInterrupts();
-
-	uint8_t buttonState;
+	displayClock();
 	
 	while(1) {
-		buttonState = pollButton();
-		//do button logic 
+		if(getStale()){
+					displayClock();
+		}
+		if(!isAInput && !isCInput) {
+			hour = 0;
+			min = 0;
+			clearSet();
+			continue;
+		}
+		//displayClock();
+		uint8_t buttonState = pollButton();
+		DelayWait10ms(100);
+		if(buttonState & 0x40) {
+			min++;
+		}
+		if(buttonState & 0x20) {
+			hour++;
+		}
+		
+		if (min >= 60){
+			hour += 1;
+			min = 0;
+		}
+	
+		if (hour >= 24) {
+			hour = 0;
+		}
+		if(isAInput){
+			displayAlarm(min, hour);
+		}
+		if(isCInput){
+			updateClock(min, hour);
+		}
 	}
 	
 }
 
+uint8_t prevBtnStat;
+
+void buttonLogic(void) {
+	PF1 ^= 0x2;
+	uint8_t buttonState = pollButton();
+	if(buttonState & 0x10 && !(prevBtnStat & 0x10)) {
+		toggleAlarm();
+		isAInput = !isAInput;
+	}
+	if(buttonState & 0x80 && !(prevBtnStat & 0x80)) {
+		isCInput = !isCInput;
+	}
+	prevBtnStat = buttonState;
+}
+
+void DelayWait10ms(uint32_t n){uint32_t volatile time;
+  while(n){
+    time = 727240*2/91;  // 10msec
+    while(time){
+	  	time--;
+    }
+    n--;
+  }
+}
+
 void initPortFDebug(void) {
+	volatile int delay;
 	SYSCTL_RCGCGPIO_R |= 0x20;            // activate port F
+	delay = SYSCTL_RCGCGPIO_R;
 	GPIO_PORTF_DIR_R |= 0x06;             // make PF2, PF1 out (built-in LED)
   GPIO_PORTF_AFSEL_R &= ~0x06;          // disable alt funct on PF2, PF1
   GPIO_PORTF_DEN_R |= 0x06;             // enable digital I/O on PF2, PF1

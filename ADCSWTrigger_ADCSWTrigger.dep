@@ -1,45 +1,55 @@
 Dependencies for Project 'ADCSWTrigger', Target 'ADCSWTrigger': (DO NOT MODIFY !)
-F (.\startup.s)(0x519B9C4E)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
-F (.\timers.c)(0x5D82EC32)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\timers.o --omf_browse .\timers.crf --depend .\timers.d)
-I (timers.h)(0x5D82EBEE)
+F (.\startup.s)(0x5D8974D4)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\timers.c)(0x5D8A4310)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\timers.o --omf_browse .\timers.crf --depend .\timers.d)
+I (timers.h)(0x5D88E690)
 I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
-F (.\timers.h)(0x5D82EBEE)()
-F (.\ST7735.h)(0x5D7BE4C7)()
-F (.\ST7735.c)(0x5D810581)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\st7735.o --omf_browse .\st7735.crf --depend .\st7735.d)
+F (.\timers.h)(0x5D88E690)()
+F (.\ST7735.h)(0x5D89631E)()
+F (.\ST7735.c)(0x5D896B48)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\st7735.o --omf_browse .\st7735.crf --depend .\st7735.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEC30B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
-I (ST7735.h)(0x5D7BE4C7)
+I (ST7735.h)(0x5D89631E)
 I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
-F (.\ClockMain.c)(0x5D82FB2B)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\clockmain.o --omf_browse .\clockmain.crf --depend .\clockmain.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEC30B2)
+F (.\ClockMain.c)(0x5D8A4A95)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\clockmain.o --omf_browse .\clockmain.crf --depend .\clockmain.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (../inc/UART.h)(0x5D7B03B1)
 I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
 I (../inc/PLL.h)(0x55463040)
-I (ST7735.h)(0x5D7BE4C7)
-I (buttonDriver.h)(0x5D82F9E7)
-I (Clock.h)(0x5D82F9DE)
-I (speaker.h)(0x5D82F9DC)
-F (.\buttonDriver.c)(0x5D82F9EB)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\buttondriver.o --omf_browse .\buttondriver.crf --depend .\buttondriver.d)
-I (buttonDriver.h)(0x5D82F9E7)
+I (ST7735.h)(0x5D89631E)
+I (buttonDriver.h)(0x5D88E5C8)
+I (Clock.h)(0x5D8A4A4D)
+I (speaker.h)(0x5D88E78E)
+F (.\buttonDriver.c)(0x5D896075)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\buttondriver.o --omf_browse .\buttondriver.crf --depend .\buttondriver.d)
+I (buttonDriver.h)(0x5D88E5C8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
-F (.\buttonDriver.h)(0x5D82F9E7)()
-F (.\Clock.c)(0x5D82F9B1)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\clock.o --omf_browse .\clock.crf --depend .\clock.d)
-I (timers.h)(0x5D82EBEE)
+I (timers.h)(0x5D88E690)
+F (.\buttonDriver.h)(0x5D88E5C8)()
+F (.\Clock.c)(0x5D8A4A44)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\clock.o --omf_browse .\clock.crf --depend .\clock.d)
+I (Clock.h)(0x5D8A4A4D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
+I (timers.h)(0x5D88E690)
 I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
+I (speaker.h)(0x5D88E78E)
+I (ST7735.h)(0x5D89631E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEC30B2)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEC30A6)
+F (.\Clock.h)(0x5D8A4A4D)()
+F (.\speaker.c)(0x5D8A4941)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\speaker.o --omf_browse .\speaker.crf --depend .\speaker.d)
+I (speaker.h)(0x5D88E78E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
-F (.\Clock.h)(0x5D82F9DE)()
-F (.\speaker.c)(0x5D82F9DE)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\speaker.o --omf_browse .\speaker.crf --depend .\speaker.d)
-I (speaker.h)(0x5D82F9DC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
-F (.\speaker.h)(0x5D82F9DC)()
-F (..\inc\UART.c)(0x5D7B0428)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (timers.h)(0x5D88E690)
+I (../inc/tm4c123gh6pm.h)(0x5388C2DA)
+I (Clock.h)(0x5D8A4A4D)
+F (.\speaker.h)(0x5D88E78E)()
+F (..\inc\UART.c)(0x5D7B0428)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEC30B2)
 I (..\inc\../inc/UART.h)(0x5D7B03B1)
 I (..\inc\../inc/tm4c123gh6pm.h)(0x5388C2DA)
-F (..\inc\PLL.c)(0x5D6934D8)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
+F (..\inc\PLL.c)(0x5D6934D8)(-c --cpu Cortex-M4.fp -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I .. -I ..\..\.. --c99-I.\RTE\_ADCSWTrigger-IC:\Users\kayva\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\kayva\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="528" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (..\inc\../inc/PLL.h)(0x55463040)
 I (..\inc\../inc/tm4c123gh6pm.h)(0x5388C2DA)

@@ -152,6 +152,8 @@ void ST7735_DrawPixel(int16_t x, int16_t y, uint16_t color);
 // Output: none
 void ST7735_DrawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
 
+void ST7735_DrawLine(int16_t x, int16_t y, int16_t x2, int16_t y2, uint16_t color);
+
 
 //------------ST7735_DrawFastHLine------------
 // Draw a horizontal line at the given coordinates with the given width and color.
@@ -431,7 +433,7 @@ void ST7735_OutString(char *ptr);
 // Sets the color in which the characters will be printed
 // Background color is fixed at black
 // Input:  16-bit packed color
-// Output: none
+// Output: none1
 // ********************************************************
 void ST7735_SetTextColor(uint16_t color);
 

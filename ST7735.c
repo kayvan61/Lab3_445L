@@ -92,6 +92,7 @@
 #include <stdint.h>
 #include "ST7735.h"
 #include "../inc/tm4c123gh6pm.h"
+#include <stdlib.h>
 
 // 16 rows (0 to 15) and 21 characters (0 to 20)
 // Requires (11 + size*size*6*8) bytes of transmission for each character
@@ -1028,6 +1029,51 @@ void ST7735_DrawBitmap(int16_t x, int16_t y, const uint16_t *image, int16_t w, i
     }
     i = i + skipC;
     i = i - 2*originalWidth;
+  }
+}
+
+void swap(int16_t* a, int16_t* b) {
+	int16_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void ST7735_DrawLine(int16_t x, int16_t y, int16_t x2, int16_t y2, uint16_t color) {
+	int16_t steep = abs(y2 - y) > abs(x2 - x);
+  if (steep) {
+    swap(&x, &y);
+    swap(&x2, &y2);
+  }
+
+  if (x > x2) {
+    swap(&x, &x2);
+    swap(&y, &y2);
+  }
+
+  int16_t dx, dy;
+  dx = x2 - x;
+  dy = abs(y2 - y);
+
+  int16_t err = dx / 2;
+  int16_t ystep;
+
+  if (y < y2) {
+    ystep = 1;
+  } else {
+    ystep = -1;
+  }
+
+  for (; x<=x2; x++) {
+    if (steep) {
+      ST7735_DrawPixel(y, x, color);
+    } else {
+      ST7735_DrawPixel(x, y, color);
+    }
+    err -= dy;
+    if (err < 0) {
+      y += ystep;
+      err += dx;
+    }
   }
 }
 

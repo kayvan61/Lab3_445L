@@ -5,5 +5,7 @@
 
 void speakerInit(void);
 void setFreq(uint32_t);
+void speakerStart(void);
+void speakerStop(void);
 
 #endif 
